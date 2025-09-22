@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import json
 
 # 1. Connect to MongoDB
-client = MongoClient( "mongodb+srv://bhagyashree:test123@cluster0.roswjud.mongodb.net/mydatabase?retryWrites=true&w=majority",tls=True)
+client = MongoClient( "")
 db = client["Dev"]
 
 groups_col = db["group"]
@@ -35,3 +35,4 @@ print("✅ Data saved to Fetch_Each_Data_output.json")
 
 # 5. Print output as JSON
 print(json.dumps(result, indent=4, default=str))
+
