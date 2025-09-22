@@ -3,10 +3,7 @@ from bson import json_util
 from pymongo import MongoClient
 
 # Connect to MongoDB Atlas
-client = MongoClient(
-    "mongodb+srv://bhagyashree:test123@cluster0.roswjud.mongodb.net/mydatabase?retryWrites=true&w=majority",
-    tls=True
-)
+client = MongoClient("")
 
 db = client["Dev"]          # replace with your DB name
 collection = db["group"]    # replace with your collection name
@@ -19,3 +16,4 @@ with open("output.json", "w", encoding="utf-8") as f:
     json.dump(data, f, default=json_util.default, indent=4)
 
 print("Data exported successfully to output.json")
+
