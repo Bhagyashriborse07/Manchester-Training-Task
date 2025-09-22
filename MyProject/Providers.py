@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import json
 
 
-client = MongoClient("mongodb+srv://bhagyashree:test123@cluster0.roswjud.mongodb.net/mydatabase?retryWrites=true&w=majority",tls=True)
+client = MongoClient("")
 db = client["Dev"]
 
 groups_col = db["group"]
@@ -36,3 +36,4 @@ with open("Providers_output.json", "w", encoding="utf-8") as f:
     json.dump(result, f, indent=4, default=str, ensure_ascii=False)
 
 print("✅ Data has been saved to Providers_output.json")
+
